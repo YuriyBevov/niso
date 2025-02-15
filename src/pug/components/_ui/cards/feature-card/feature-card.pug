@@ -1,0 +1,8 @@
+mixin feature-card(data)
+  .feature-card-container
+    .feature-card
+      if data.icon
+        img(src=`./assets/img/${data.icon}.png` alt= data.name width="160" height="160")
+      
+      span.base-subtitle!= data.title
+      span.base-text!= data.text

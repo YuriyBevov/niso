@@ -1,12 +1,21 @@
 .base-title {
 	display: block;
-	font-weight: 700;
+	font-family: var(--secondary-font);
+	font-weight: 600;
 	font-size: clamp(28px, 4.4vw, 48px);
 	line-height: 1;
 	margin: 0;
-	margin-bottom: clamp(36px, 3.2vw, 50px);
 	color: var(--primary);
 	text-shadow: 5px 5px 0px var(--light);
+}
+
+.base-subtitle {
+	display: block;
+	font-family: var(--secondary-font);
+	font-weight: 700;
+	font-size: clamp(18px, 2.4vw, 28px);
+	margin: 0;
+	color: var(--accent);
 }
 
 .main-title {
@@ -17,18 +26,10 @@
 	color: var(--primary);
 }
 
-.base-subtitle {
-	display: block;
-	font-weight: 600;
-	font-size: clamp(16px, 2.6vw, 20px);
-	margin: 0;
-	color: var(--site-base-text-color);
-}
-
 .base-text {
 	display: inline-block;
-	font-size: clamp(16px, 3vw, 20px);
-	font-weight: 500;
+	font-size: clamp(16px, 2.4vw, 18px);
+	font-weight: 400;
 	margin: 0;
 	color: var(--site-base-text-color);
 

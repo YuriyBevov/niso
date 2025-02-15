@@ -15,10 +15,6 @@ $base-section-header-offset: clamp(40px, 5vw, 80px);
 			color: var(--accent);
 		}
 
-		.base-title {
-			margin: 0;
-		}
-
 		&:has(.base-title + .base-text) .base-title {
 			margin-bottom: 12px;
 		}
