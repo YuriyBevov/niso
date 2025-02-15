@@ -59,13 +59,11 @@
 
 // offsets
 :root {
-	--section-offset-vertical: clamp(40px, 4vw, 100px);
-	--grid-offset: clamp(16px, 3vw, 36px);
-	--main-offset: 40px;
+	--base-grid-offset: clamp(20px, 3.2vw, 40px);
 }
 
 // utils
 :root {
-	--main-border-radius: 10px;
-	--base-box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+	--base-border-radius: 15px;
+	--base-box-shadow: 5px 5px 20px #d4e4f4;
 }

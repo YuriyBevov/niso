@@ -6,6 +6,7 @@
 
 .features {
 	container: features / inline-size;
+	background-color: var(--lighter);
 	&__grid {
 		display: grid;
 		grid-template-columns: 1fr;
