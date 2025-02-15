@@ -1,16 +1,16 @@
 // stylelint-disable
-@use '../_vars/scoped';
+@use "../_vars/scoped";
 
 // down
 @mixin container-down($name, $width) {
-  @container #{$name} (max-width: #{$width}) {
-    @content;
-  }
+	@container #{$name} (max-width: #{calc($width - 1px)}) {
+		@content;
+	}
 }
 
 // up
 @mixin container-up($name, $width) {
-  @container #{$name} (min-width: #{$width} ) {
-    @content;
-  }
+	@container #{$name} (min-width: #{calc($width + 1px)} ) {
+		@content;
+	}
 }

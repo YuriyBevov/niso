@@ -1,0 +1,17 @@
+block variables
+  - sectionClass = ''
+  - sectionContainerClass = ''
+  - sectionHeadline = ''
+  - sectionTitle = ''
+  - sectionText  = ''
+
+section.base-section(class= sectionClass)
+  .container(class= sectionContainerClass)
+    .base-section__header
+      if sectionHeadline
+        span.base-text.base-section__headline!= sectionHeadline
+      if sectionTitle
+        h2.base-title!= sectionTitle
+      if sectionText
+        span.base-text!= sectionText
+    block content

@@ -1,18 +1,23 @@
 // fonts
 :root {
-	--primary-font: "Montserrat", sans-serif;
+	--primary-font: "SourceSans3", sans-serif;
+	--secondary-font: "Manrope", sans-serif;
 }
 
 // colors
 :root {
 	--white: #ffffff;
 	--black: #000000;
-	--primary: #7d3a3a;
-	--secondary: #f4f1ed;
-	--success: #b1c2ab;
-	--dark: #222131;
-	--light: #fdfcfb;
-	--muted: #a9afb5;
+
+	--primary: #00296d;
+	--secondary: #44c6e9;
+	--accent: #336cbc;
+	--warning: #fba9a8;
+	--success: green;
+	--dark: #252525;
+	--light: #d4e4f4;
+	--lighter: #ecf4fb;
+	--info: #666666;
 }
 
 // containers
@@ -38,8 +43,9 @@
 	--site-base-font-weight: 400;
 	--site-base-font-size: clamp(16px, 2.2vw, 18px);
 	--site-base-line-height: 1.2;
-	--site-base-text-color: var(--dark);
-	--site-bg-color: var(--light);
+	--site-base-letter-spacing: 0.001em;
+	--site-base-text-color: var(--info);
+	--site-bg-color: var(--white);
 }
 
 // scrollbar
