@@ -1,6 +1,145 @@
+@forward "@styles/_extends/flexbox.scss";
 @use "@styles/_mixins/container-queries" as *;
 @use "@styles/_vars/scoped" as *;
 
 .header {
+	@extend %flex-column;
+	position: sticky;
+	top: 0;
+	padding: 15px 0;
+	background-color: var(--white);
 	container: header / inline-size;
+
+	.container {
+		@extend %flex-column;
+		gap: 20px;
+	}
+
+	&__section {
+		&--top {
+			@extend %flex-align;
+			gap: 5px clamp(20px, 2.4vw, 32px);
+
+			.main-logo {
+				margin-right: auto;
+			}
+
+			.main-btn {
+				display: none;
+			}
+
+			.info-block--address,
+			.social-block {
+				display: none;
+			}
+
+			@include container-up("header", $mobile-width) {
+				.main-btn {
+					display: flex;
+				}
+			}
+
+			@include container-up("header", $tablet-width) {
+				.social-block {
+					display: flex;
+				}
+			}
+
+			@include container-up("header", $tablet-lg-width) {
+				.burger-btn {
+					display: none;
+				}
+			}
+
+			@include container-up("header", 1140px) {
+				.info-block--address {
+					display: flex;
+				}
+			}
+		}
+
+		&--bottom {
+			background-color: var(--lighter);
+
+			@include container-up("header", $tablet-lg-width) {
+				display: flex;
+				border-radius: 15px;
+				box-shadow: var(--base-box-shadow);
+				padding: 5px 20px;
+
+				.info-block,
+				.social-block,
+				.main-btn {
+					display: none;
+				}
+			}
+		}
+	}
+
+	&:has(.header__section--bottom.expanded) .header__section--top {
+		border-color: var(--white);
+	}
+
+	@include container-down("header", $tablet-lg-width) {
+		min-height: 85px;
+	}
+}
+
+.mobile-menu {
+	@include container-down("header", $tablet-lg-width) {
+		display: none;
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100vh;
+		height: 100dvh;
+		background-color: rgba(0, 0, 0, 0.6);
+		backdrop-filter: blur(3px);
+
+		&.expanded {
+			display: block;
+		}
+
+		&__wrapper {
+			@extend %flex-column;
+			gap: 40px;
+			width: 85vw;
+			height: 100%;
+			max-height: 100vh;
+			max-width: 540px;
+			padding: 0 var(--container-offset);
+			background-color: var(--lighter);
+			overflow: hidden;
+			overflow-y: auto;
+		}
+
+		&__header {
+			position: sticky;
+			top: 0;
+			@extend %flex-align;
+			justify-content: space-between;
+			gap: 24px;
+			min-height: 85px;
+			padding: 15px 0;
+			border-bottom: 1px solid var(--white);
+			background-color: var(--lighter);
+		}
+
+		&__footer {
+			@extend %flex-column;
+			gap: 20px;
+			margin-top: auto;
+			padding-bottom: 30px;
+		}
+	}
+
+	@include container-up("header", $tablet-lg-width) {
+		&__wrapper {
+			width: 100%;
+		}
+		&__header {
+			display: none;
+		}
+	}
 }

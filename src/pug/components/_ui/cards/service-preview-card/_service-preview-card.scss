@@ -1,4 +1,5 @@
 @forward "@styles/_extends/flexbox.scss";
+@forward "@styles/_extends/effects.scss";
 @forward "@styles/_extends/utils.scss";
 @use "@styles/_mixins/container-queries" as *;
 @use "@styles/_vars/scoped" as *;
@@ -21,15 +22,19 @@
 		}
 
 		.service-preview-card-header {
-			@extend %flex-column;
-			gap: 5px;
+			// @extend %flex-column;
+			// gap: 5px;
+			display: grid;
+			grid-template-columns: auto 1fr;
+			gap: 12px;
+			align-items: center;
 
-			@include container-up("service-preview-card", 560px) {
-				display: grid;
-				grid-template-columns: auto 1fr;
-				gap: 12px;
-				align-items: center;
-			}
+			// @include container-up("service-preview-card", 560px) {
+			// 	display: grid;
+			// 	grid-template-columns: auto 1fr;
+			// 	gap: 12px;
+			// 	align-items: center;
+			// }
 		}
 	}
 
@@ -42,6 +47,7 @@
 		li::marker,
 		li > a {
 			color: var(--secondary);
+			@extend %hover-opacity;
 		}
 
 		@include container-up("service-preview-card", 560px) {

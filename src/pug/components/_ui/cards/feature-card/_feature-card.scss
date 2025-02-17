@@ -24,6 +24,7 @@
 		@include container-up("feature-card", 440px) {
 			display: grid;
 			grid-template-columns: auto auto;
+			gap: 15px;
 
 			img {
 				grid-row: 1/3;

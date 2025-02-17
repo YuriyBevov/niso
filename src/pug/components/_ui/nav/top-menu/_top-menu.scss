@@ -1,0 +1,31 @@
+@forward "@styles/_extends/resets.scss";
+@forward "@styles/_extends/flexbox.scss";
+@forward "@styles/_extends/effects.scss";
+@use "@styles/_mixins/container-queries" as *;
+@use "@styles/_vars/scoped" as *;
+
+.top-menu {
+	width: 100%;
+
+	ul {
+		@extend %list-reset;
+		@extend %flex-column;
+		gap: 6px;
+
+		@include container-up("header", $tablet-lg-width) {
+			flex-direction: row;
+			justify-content: space-around;
+		}
+
+		li {
+			a {
+				@extend %flex-align;
+				width: fit-content;
+				padding: 12px 0;
+				font-size: 18px;
+				color: var(--dark);
+				@extend %hover-opacity;
+			}
+		}
+	}
+}
