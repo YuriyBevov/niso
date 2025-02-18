@@ -37,7 +37,7 @@ export default defineConfig({
 			route: "assets/sprite.svg", // название файла спрайта use(xlink:href='./{ROUTE}#icon-chevron-down')
 			output: {
 				filename: "sprite.svg", // название файла спрайта на выходе
-				view: true,
+				view: false,
 				use: true,
 			},
 			svgo: {

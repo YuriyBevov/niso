@@ -4,8 +4,10 @@
 
 .header {
 	@extend %flex-column;
+	justify-content: center;
 	position: sticky;
 	top: 0;
+	min-height: 85px;
 	padding: 15px 0;
 	background-color: var(--white);
 	container: header / inline-size;
@@ -28,7 +30,7 @@
 				display: none;
 			}
 
-			.info-block--address,
+			.info-block,
 			.social-block {
 				display: none;
 			}
@@ -49,11 +51,16 @@
 				.burger-btn {
 					display: none;
 				}
+
+				.info-block--contacts {
+					display: flex;
+				}
 			}
 
 			@include container-up("header", 1140px) {
 				.info-block--address {
 					display: flex;
+					margin: 0 auto;
 				}
 			}
 		}
@@ -66,6 +73,7 @@
 				border-radius: 15px;
 				box-shadow: var(--base-box-shadow);
 				padding: 5px 20px;
+				margin-bottom: -40px;
 
 				.info-block,
 				.social-block,
