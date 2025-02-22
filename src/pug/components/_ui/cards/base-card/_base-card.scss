@@ -1,0 +1,52 @@
+@forward "@styles/_extends/flexbox.scss";
+@forward "@styles/_extends/effects.scss";
+@forward "@styles/_extends/utils.scss";
+@use "@styles/_mixins/container-queries" as *;
+@use "@styles/_vars/scoped" as *;
+
+.base-card {
+	@extend %flex-column;
+	gap: 20px 30px;
+	padding: 20px;
+	border-radius: 10px;
+	box-shadow: var(--base-box-shadow);
+
+	&-wrapper {
+		container: base-card / inline-size;
+	}
+
+	&__content {
+		@extend %flex-column;
+		gap: 20px;
+
+		.main-btn {
+			margin-top: 10px;
+		}
+	}
+
+	&__headline {
+		font-size: 16px;
+		font-weight: 400;
+		color: var(--accent);
+	}
+
+	img {
+		width: 100%;
+		height: auto;
+		object-fit: cover;
+		object-position: left;
+		aspect-ratio: 2 / 1;
+		border-radius: 10px;
+	}
+
+	@include container-up("base-card", 880px) {
+		flex-direction: row;
+		align-items: center;
+
+		img {
+			width: 50%;
+			max-width: 480;
+			max-height: 240px;
+		}
+	}
+}
