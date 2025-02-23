@@ -10,6 +10,9 @@
 	min-height: 85px;
 	padding: 15px 0;
 	background-color: var(--white);
+	z-index: 99;
+
+	border-radius: 0 0 15px 15px;
 	container: header / inline-size;
 
 	.container {

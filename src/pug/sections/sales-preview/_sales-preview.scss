@@ -1,15 +1,18 @@
+@forward "@styles/_extends/flexbox.scss";
 @use "@styles/_mixins/container-queries" as *;
 @use "@styles/_vars/scoped" as *;
 
 // Если нужно вынести стили карточки отдельно, то убрать этот импорт и для дев режима включить в стили index.scss
 // После создать генерацию разметки для feature-card _bx-templates
+@use "@pug/components/_ui/sliders/base-cards-slider/base-cards-slider";
 @use "@pug/components/_ui/cards/base-card/base-card";
 
 .sales-preview {
 	container: sales-preview / inline-size;
 
-	&__grid {
-		&-item {
-		}
+	&__content {
+		@extend %flex-column;
+		align-items: center;
+		gap: 12px;
 	}
 }

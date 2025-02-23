@@ -1,26 +1,31 @@
 @forward "@styles/_extends/flexbox.scss";
 @forward "@styles/_extends/effects.scss";
 @forward "@styles/_extends/utils.scss";
+@use "@styles/_mixins/text-truncate" as *;
 @use "@styles/_mixins/container-queries" as *;
 @use "@styles/_vars/scoped" as *;
 
 .base-card {
 	@extend %flex-column;
 	gap: 20px 30px;
-	padding: 20px;
+	height: inherit;
+	padding: clamp(12px, 2.2vw, 20px);
 	border-radius: 10px;
 	box-shadow: var(--base-box-shadow);
 
 	&-wrapper {
+		height: 100%;
 		container: base-card / inline-size;
 	}
 
 	&__content {
 		@extend %flex-column;
+		flex-grow: 1;
 		gap: 20px;
 
-		.main-btn {
-			margin-top: 10px;
+		.base-subtitle,
+		.base-text {
+			@include text-truncate(3);
 		}
 	}
 
@@ -39,6 +44,11 @@
 		border-radius: 10px;
 	}
 
+	.main-btn {
+		width: 100%;
+		margin-top: auto;
+	}
+
 	@include container-up("base-card", 880px) {
 		flex-direction: row;
 		align-items: center;
@@ -47,6 +57,10 @@
 			width: 50%;
 			max-width: 480;
 			max-height: 240px;
+		}
+
+		.main-btn {
+			width: fit-content;
 		}
 	}
 }

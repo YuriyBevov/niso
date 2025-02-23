@@ -11,10 +11,10 @@ window.addEventListener("load", () => {
 		alignItems: "center",
 		justifyContent: "center",
 		position: "fixed",
-		bottom: "40px",
-		right: "40px",
-		width: "50px",
-		height: "50px",
+		bottom: "20px",
+		right: "20px",
+		width: "40px",
+		height: "40px",
 		borderRadius: "50%",
 		backgroundColor: "var(--secondary)",
 		zIndex: 89,
@@ -24,7 +24,7 @@ window.addEventListener("load", () => {
 		transform: "translateY(150px)",
 		backgroundImage: "url(/assets/img/icon-up.svg)",
 		backgroundRepeat: "no-repeat",
-		backgroundSize: "16px",
+		backgroundSize: "12px",
 		backgroundPosition: "center",
 	});
 
