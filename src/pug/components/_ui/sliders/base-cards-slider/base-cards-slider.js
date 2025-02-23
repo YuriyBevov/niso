@@ -1,5 +1,3 @@
-console.log("base-cards-slider");
-
 import Swiper from "swiper";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
@@ -17,10 +15,10 @@ if (sliders.length) {
 			modules: [Navigation, Pagination, Autoplay],
 			slidesPerView: 1,
 			spaceBetween: 20,
-			// autoplay: {
-			// 	delay: 3000,
-			// 	disableOnInteraction: false,
-			// },
+			autoplay: {
+				delay: 5000,
+				disableOnInteraction: false,
+			},
 
 			breakpoints: {
 				640: {

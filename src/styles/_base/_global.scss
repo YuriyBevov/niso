@@ -19,7 +19,7 @@ body {
 	text-rendering: optimizeLegibility;
 }
 
-body.page-wrapper {
+* {
 	&::-webkit-scrollbar {
 		background-color: var(--scrollbar-color);
 		width: var(--scrollbar-width);

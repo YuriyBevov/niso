@@ -51,11 +51,11 @@
 
 // scrollbar
 :root {
-	--scrollbar-color: var(--site-bg-color);
-	--scrollbar-width: 12px;
-	--scrollbar-border-radius: 0;
-	--scrollbar-thumb-color: var(--primary);
-	--scrollbar-thumb-border-radius: 0;
+	--scrollbar-color: var(--light);
+	--scrollbar-width: 8px;
+	--scrollbar-border-radius: 8px;
+	--scrollbar-thumb-color: var(--secondary);
+	--scrollbar-thumb-border-radius: 8px;
 }
 
 // offsets
@@ -66,5 +66,7 @@
 // utils
 :root {
 	--base-border-radius: 15px;
+	--border-radius-sm: 10px;
+	--border-radius-lg: 30px;
 	--base-box-shadow: 5px 5px 20px #d4e4f4;
 }
