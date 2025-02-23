@@ -11,7 +11,7 @@
 	padding: 15px 0;
 	background-color: var(--white);
 	z-index: 99;
-
+	border-bottom: 4px solid var(--secondary);
 	border-radius: 0 0 15px 15px;
 	container: header / inline-size;
 
@@ -74,7 +74,8 @@
 			@include container-up("header", $tablet-lg-width) {
 				display: flex;
 				border-radius: 15px;
-				box-shadow: var(--base-box-shadow);
+				// box-shadow: var(--base-box-shadow);
+				box-shadow: 0px 10px 20px #d4e4f4;
 				padding: 5px 20px;
 				margin-bottom: -40px;
 
