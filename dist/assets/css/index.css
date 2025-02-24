@@ -877,7 +877,7 @@ img{
             box-shadow:var(--base-box-shadow);
   }
 }
-.bottom-menu ul, .staff-preview__content, .staff-preview-card, .staff-preview-card__header, .staff-preview-card__content, .staff-preview-card__content-section, .staff-preview-card__footer, .sales-preview__content, .base-card, .base-card__content, .service-preview-card, .service-preview-card:has(ul) ul, .feature-card, .top-menu ul{
+.bottom-menu ul, .reviews-preview__grid-item, .review-card, .staff-preview__content, .staff-preview-card, .staff-preview-card__header, .staff-preview-card__content, .staff-preview-card__content-section, .staff-preview-card__footer, .sales-preview__content, .base-card, .base-card__content, .service-preview-card, .service-preview-card:has(ul) ul, .feature-card, .top-menu ul{
   display:-webkit-box;
   display:-ms-flexbox;
   display:flex;
@@ -887,13 +887,26 @@ img{
           flex-direction:column;
 }
 
-.bottom-main-menu ul li a, .bottom-menu, .bottom-menu ul li a, .swiper.staff-preview-slider:has(.swiper-navigation) .swiper-navigation, .top-menu ul li a{
+.bottom-main-menu ul li a, .bottom-menu, .bottom-menu ul li a, .review-card__rate, .swiper.staff-preview-slider:has(.swiper-navigation) .swiper-navigation, .top-menu ul li a{
   display:-webkit-box;
   display:-ms-flexbox;
   display:flex;
   -webkit-box-align:center;
       -ms-flex-align:center;
           align-items:center;
+}
+
+.reviews-preview__button-row{
+  display:-webkit-box;
+  display:-ms-flexbox;
+  display:flex;
+  -ms-flex-wrap:wrap;
+      flex-wrap:wrap;
+  gap:clamp(16px, 2.4vw, 24px);
+  -webkit-box-align:center;
+      -ms-flex-align:center;
+          align-items:center;
+  gap:12px;
 }
 
 .bottom-main-menu ul, .bottom-menu ul, .top-menu ul{
@@ -1387,10 +1400,102 @@ img{
           align-items:center;
 }
 
+.review-card{
+  gap:10px;
+  padding:24px;
+  border-radius:var(--base-border-radius);
+  -webkit-box-shadow:var(--base-box-shadow);
+          box-shadow:var(--base-box-shadow);
+}
+.review-card__rate{
+  gap:2px;
+}
+.review-card__rate .rate-item{
+  fill:var(--secondary);
+}
+.review-card__rate .rate-item--muted{
+  fill:var(--muted);
+}
+.review-card__author{
+  font-size:clamp(16px, 2.4vw, 20px);
+  color:#252525;
+  -webkit-line-clamp:2;
+  display:-webkit-box;
+  -webkit-box-orient:vertical;
+  overflow:hidden;
+}
+.review-card__content{
+  padding:10px 0;
+}
+
+.reviews-preview{
+  container:reviews-preview/inline-size;
+}
+.reviews-preview__grid{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:30px clamp(40px, 3vw, 80px);
+}
+@container reviews-preview (min-width: 800px ){
+  .reviews-preview__grid{
+    grid-template-columns:4fr 5fr;
+  }
+}
+.reviews-preview__grid-item{
+  container:reviews-preview-item/inline-size;
+  gap:30px;
+}
+@container reviews-preview (min-width: 800px ){
+  .reviews-preview__grid-item{
+    position:sticky;
+    top:180px;
+    height:-webkit-fit-content;
+    height:-moz-fit-content;
+    height:fit-content;
+  }
+}
+.reviews-preview__grid-item iframe{
+  width:100%;
+  height:70vw;
+  min-height:620px;
+  max-height:800px;
+  border:none;
+  -webkit-box-shadow:var(--base-box-shadow);
+          box-shadow:var(--base-box-shadow);
+  border-radius:var(--base-border-radius);
+}
+.reviews-preview__inner-grid{
+  gap:20px;
+  -webkit-columns:320px;
+     -moz-columns:320px;
+          columns:320px;
+}
+.reviews-preview__inner-grid .review-card{
+  page-break-inside:avoid;
+  -webkit-column-break-inside:avoid;
+     -moz-column-break-inside:avoid;
+          break-inside:avoid;
+  margin-bottom:16px;
+}
+@container reviews-preview-item (max-width: 479px){
+  .reviews-preview__button-row .main-btn{
+    -webkit-box-flex:1;
+        -ms-flex-positive:1;
+            flex-grow:1;
+  }
+}
+@container reviews-preview (max-width: 533px){
+  .reviews-preview__button-row .main-btn{
+    -webkit-box-flex:1;
+        -ms-flex-positive:1;
+            flex-grow:1;
+  }
+}
+
 .faq-preview{
   container:faq-preview/inline-size;
 }
-@container faq-preview (min-width: 768px ){
+@container faq-preview (min-width: 534px ){
   .faq-preview > .container{
     position:relative;
   }
@@ -1410,8 +1515,8 @@ img{
 @container faq-preview (min-width: 960px ){
   .faq-preview > .container{
     display:grid;
-    grid-template-columns:2fr 3fr;
-    gap:20px;
+    grid-template-columns:4fr 5fr;
+    gap:30px clamp(40px, 3vw, 80px);
   }
 }
 

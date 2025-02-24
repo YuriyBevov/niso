@@ -1,0 +1,35 @@
+@forward "@styles/_extends/flexbox.scss";
+@use "@styles/_mixins/text-truncate" as *;
+@use "@styles/_mixins/container-queries" as *;
+@use "@styles/_vars/scoped" as *;
+
+.review-card {
+	@extend %flex-column;
+	gap: 10px;
+	padding: 24px;
+	border-radius: var(--base-border-radius);
+	box-shadow: var(--base-box-shadow);
+
+	&__rate {
+		@extend %flex-align;
+		gap: 2px;
+		.rate-item {
+			fill: var(--secondary);
+
+			&--muted {
+				fill: var(--muted);
+			}
+		}
+	}
+
+	&__author {
+		font-size: clamp(16px, 2.4vw, 20px);
+		color: #252525;
+
+		@include text-truncate(2);
+	}
+
+	&__content {
+		padding: 10px 0;
+	}
+}

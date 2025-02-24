@@ -1,0 +1,56 @@
+extends ../../layouts/base-section/base-section.pug
+
+block variables
+  - sectionClass = 'reviews-preview'
+  - sectionContainerClass = ''
+  - sectionHeadline = 'Что о нас говорят'
+  - sectionTitle = 'Отзывы наших пациентов'
+  - sectionText = ''
+
+block content
+  include ../../components/_ui/controls/buttons/main-btn/main-btn
+  include ../../components/_ui/cards/review-card/review-card
+  .reviews-preview__grid
+    .reviews-preview__grid-item
+      <iframe src="https://yandex.ru/maps-reviews-widget/159276084724?comments"></iframe>
+    .reviews-preview__grid-item
+      .reviews-preview__inner-grid
+
+        +review-card({
+          rate: 2,
+          author: 'Константин Константинович Константинов',
+          content: 'Я была в этой клинике на профгигиене полости рта. Мне очень понравилось и удобное расположение клиники, и предупредительное отношение администратора, и качественное лечение стоматолога!!! Чистота, вежливость, безболезненность. Врач внимательно изучил мою анкету болезней и принимаемых лекарств. Потом удалил камни лазером, провел чистку air-flow и закончил шлифовкой. Дал рекомендации по дальнейшему лечению.'
+        })
+
+        +review-card({
+          rate: 3,
+          author: 'Константин Константинович Константинов',
+          content: 'качественное лечение стоматолога!!! Чистота, вежливость, безболезненность. Врач внимательно изучил мою анкету болезней и принимаемых лекарств. Потом удалил камни лазером, провел чистку air-flow и закончил шлифовкой. Дал рекомендации по дальнейшему лечению.'
+        })
+        +review-card({
+          rate: 5,
+          author: 'Константин Константинович Константинов',
+          content: 'Мне очень понравилось и удобное расположение клиники.'
+        })
+        +review-card({
+          rate: 4,
+          author: 'Константин Константинович Константинов',
+          content: 'Я была в этой клинике на профгигиене полости рта. Мне очень понравилось и удобное расположение клиники.'
+        })
+        +review-card({
+          rate: 5,
+          author: 'Константин',
+          content: 'Я была в этой клинике на профгигиене полости рта.'
+        })
+
+      .reviews-preview__button-row
+        +main-btn({
+          tag: 'a',
+          href: "#",
+          text: 'Смотреть все отзывы',
+          cls: 'main-btn--outlined'
+        })
+        +main-btn({
+          tag: 'button',
+          text: 'Оставить отзыв'
+        })
