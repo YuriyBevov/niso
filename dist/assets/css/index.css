@@ -299,7 +299,7 @@ img{
   background-color:var(--secondary);
 }
 
-.footer__section, .footer__section--middle .footer__section-field, .footer__section--bottom, .footer__section--bottom .footer__section-field, .developer-logo, .info-block__content, .base-section__header, .header, .header .container, .mobile-menu__wrapper, .mobile-menu__footer{
+.footer__section, .footer__section--middle .footer__section-field, .footer__section--bottom, .footer__section--bottom .footer__section-field, .developer-logo, .info-block__content, .base-section__header, .accordeon, .accordeon-item, .header, .header .container, .mobile-menu__wrapper, .mobile-menu__footer{
   display:-webkit-box;
   display:-ms-flexbox;
   display:flex;
@@ -309,7 +309,7 @@ img{
           flex-direction:column;
 }
 
-.social-block__item, .main-logo, .burger-btn, .main-btn{
+.social-block__item, .accordeon-opener, .main-logo, .burger-btn, .main-btn{
   display:-webkit-box;
   display:-ms-flexbox;
   display:flex;
@@ -321,7 +321,7 @@ img{
           justify-content:center;
 }
 
-.social-block, .header__section--top, .mobile-menu__header{
+.social-block, .accordeon-header, .header__section--top, .mobile-menu__header{
   display:-webkit-box;
   display:-ms-flexbox;
   display:flex;
@@ -577,7 +577,73 @@ img{
     max-width:240px;
   }
 }
-
+.accordeon{
+  gap:16px;
+}
+.accordeon-item{
+  border-radius:var(--base-border-radius);
+  background-color:var(--white);
+  -webkit-box-shadow:var(--base-box-shadow);
+          box-shadow:var(--base-box-shadow);
+  border:1px solid #d4e4f4;
+}
+.accordeon-item svg{
+  fill:var(--primary);
+}
+.accordeon-item.expanded .accordeon-body{
+  grid-template-rows:1fr;
+  opacity:1;
+}
+.accordeon-item.expanded .accordeon-opener{
+  -webkit-transform:rotate(135deg);
+      -ms-transform:rotate(135deg);
+          transform:rotate(135deg);
+}
+.accordeon-header{
+  position:relative;
+  -webkit-box-pack:justify;
+      -ms-flex-pack:justify;
+          justify-content:space-between;
+  gap:24px;
+  padding:clamp(16px, 2.4vw, 30px);
+  cursor:pointer;
+}
+.accordeon-opener{
+  width:40px;
+  min-width:40px;
+  height:40px;
+  border-radius:50%;
+  background-color:var(--secondary);
+  will-change:auto;
+  -webkit-transition:-webkit-transform var(--main-transition);
+  transition:-webkit-transform var(--main-transition);
+  transition:transform var(--main-transition);
+  transition:transform var(--main-transition), -webkit-transform var(--main-transition);
+}
+.accordeon-opener svg{
+  width:16px;
+  height:16px;
+  fill:var(--white);
+}
+.accordeon-body{
+  display:grid;
+  grid-template-rows:0fr;
+  opacity:0;
+  padding:0 clamp(16px, 2.4vw, 30px);
+  will-change:auto;
+  -webkit-transition:grid-template-rows var(--main-transition), opacity 0.1s var(--main-transition);
+  transition:grid-template-rows var(--main-transition), opacity 0.1s var(--main-transition);
+  transition:grid-template-rows var(--main-transition), opacity 0.1s var(--main-transition), -ms-grid-rows var(--main-transition);
+}
+.accordeon-body > .content-block{
+  margin:0;
+  overflow:hidden;
+  -webkit-transition:padding var(--main-transition);
+  transition:padding var(--main-transition);
+}
+.accordeon-body > .content-block > *{
+  margin-top:0;
+}
 .base-section{
   padding:clamp(24px, 4vw, 60px) 0;
 }
@@ -671,7 +737,7 @@ img{
 }
 .developer-logo img{
   width:100%;
-  max-width:200px;
+  max-width:120px;
   height:auto;
   -o-object-fit:contain;
      object-fit:contain;
@@ -1319,6 +1385,34 @@ img{
   -webkit-box-align:center;
       -ms-flex-align:center;
           align-items:center;
+}
+
+.faq-preview{
+  container:faq-preview/inline-size;
+}
+@container faq-preview (min-width: 768px ){
+  .faq-preview > .container{
+    position:relative;
+  }
+  .faq-preview > .container::after{
+    position:absolute;
+    top:-80px;
+    right:-25px;
+    content:"";
+    width:500px;
+    height:500px;
+    background-image:url("../img/faq-bg.svg");
+    background-repeat:no-repeat;
+    background-size:contain;
+    z-index:-1;
+  }
+}
+@container faq-preview (min-width: 960px ){
+  .faq-preview > .container{
+    display:grid;
+    grid-template-columns:2fr 3fr;
+    gap:20px;
+  }
 }
 
 .bottom-menu{
