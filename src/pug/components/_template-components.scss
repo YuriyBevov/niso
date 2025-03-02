@@ -7,6 +7,9 @@
 @use "@pug/layouts/base-section/base-section";
 @use "./blocks/content-block/content-block";
 @use "./blocks/info-block/info-block";
+@use "@pug/components/_ui/form-controls/main-textarea/main-textarea";
+@use "@pug/components/_ui/form-controls/main-checkbox/main-checkbox";
+@use "@pug/components/_ui/form-controls/main-input/main-input";
 @use "./blocks/social-block/social-block";
 @use "@pug/components/_ui/logos/developer-logo/developer-logo";
 /* purgecss end ignore */

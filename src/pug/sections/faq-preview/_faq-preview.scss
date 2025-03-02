@@ -2,6 +2,8 @@
 @use "@styles/_vars/scoped" as *;
 
 .faq-preview {
+	position: relative;
+	z-index: 2;
 	container: faq-preview / inline-size;
 
 	@include container-up("faq-preview", $mobile-width) {

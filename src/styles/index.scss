@@ -8,5 +8,7 @@
 @use "@pug/sections/staff-preview/staff-preview";
 @use "@pug/sections/reviews-preview/reviews-preview";
 @use "@pug/sections/faq-preview/faq-preview";
+@use "@pug/sections/callback/callback";
+@use "@pug/components/_ui/forms/callback-form/callback-form";
 @use "@pug/components/_ui/nav/bottom-menu/bottom-menu";
 @use "@pug/components/_ui/nav/bottom-main-menu/bottom-main-menu";
