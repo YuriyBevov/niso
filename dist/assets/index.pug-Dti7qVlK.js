@@ -5260,13 +5260,46 @@ function Thumb(_ref) {
     update: update2
   });
 }
+const slider = document.querySelector(".top-banner-slider");
+console.log(slider);
+if (slider) {
+  slider.querySelector(".swiper-pagination");
+  const btnNext = slider.querySelector(".swiper-button-next");
+  const btnPrev = slider.querySelector(".swiper-button-prev");
+  new Swiper(slider, {
+    modules: [Navigation, Pagination, Autoplay],
+    slidesPerView: 1,
+    spaceBetween: 20,
+    // effect: "fade",
+    // autoplay: {
+    // 	delay: 5000,
+    // 	disableOnInteraction: false,
+    // },
+    // breakpoints: {
+    // 	640: {
+    // 		slidesPerView: 2,
+    // 	},
+    // 	960: {
+    // 		slidesPerView: 3,
+    // 	},
+    // },
+    navigation: {
+      nextEl: btnNext ? btnNext : null,
+      prevEl: btnPrev ? btnPrev : null
+    }
+    // pagination: {
+    // 	el: pagination ? pagination : null,
+    // 	dynamicBullets: true,
+    // },
+  });
+}
 const sliders = document.querySelectorAll(".base-cards-slider");
 if (sliders.length) {
-  sliders.forEach((slider) => {
-    const pagination = slider.querySelector(".swiper-pagination");
-    const btnNext = slider.querySelector(".swiper-button-next");
-    const btnPrev = slider.querySelector(".swiper-button-prev");
-    new Swiper(slider, {
+  sliders.forEach((slider2) => {
+    const pagination = slider2.querySelector(".swiper-pagination");
+    const btnNext = slider2.querySelector(".swiper-button-next");
+    const btnPrev = slider2.querySelector(".swiper-button-prev");
+    new Swiper(slider2, {
       modules: [Navigation, Pagination, Autoplay],
       slidesPerView: 1,
       spaceBetween: 20,
@@ -9306,27 +9339,6 @@ window.addEventListener("load", () => {
   const btn = document.createElement("button");
   btn.classList.add("scroll-up-btn");
   btn.setAttribute("aria-label", "В начало страницы");
-  gsapWithCSS.set(btn, {
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    position: "fixed",
-    bottom: "20px",
-    right: "20px",
-    width: "40px",
-    height: "40px",
-    borderRadius: "50%",
-    backgroundColor: "var(--secondary)",
-    zIndex: 89,
-    mixBlendMode: "multiply",
-    padding: "5px",
-    border: "none",
-    transform: "translateY(150px)",
-    backgroundImage: "url(/assets/img/icon-up.svg)",
-    backgroundRepeat: "no-repeat",
-    backgroundSize: "12px",
-    backgroundPosition: "center"
-  });
   document.body.append(btn);
   let isActive = false;
   window.addEventListener("scroll", () => {

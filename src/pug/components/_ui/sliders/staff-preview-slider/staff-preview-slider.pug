@@ -18,9 +18,7 @@ mixin staff-preview-slider(data)
       .swiper-pagination
     
     if data.navigation
-      .swiper-navigation
-        button.swiper-button-prev
-        button.swiper-button-next
+      include ../../controls/swiper-navigation/swiper-navigation 
 
   .swiper.staff-preview-slider-thumbs
     .swiper-wrapper

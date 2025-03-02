@@ -49,6 +49,25 @@
 		margin-top: auto;
 	}
 
+	.price-badge {
+		background-color: var(--warning);
+		border-radius: var(--base-border-radius);
+		padding: 12px 16px;
+		width: 100%;
+		text-align: center;
+		margin-top: auto;
+
+		span {
+			color: var(--white);
+			font-weight: 600;
+			font-size: 24px;
+		}
+	}
+
+	.price-badge + .main-btn {
+		margin: 0;
+	}
+
 	@include container-up("base-card", 880px) {
 		flex-direction: row;
 		align-items: center;

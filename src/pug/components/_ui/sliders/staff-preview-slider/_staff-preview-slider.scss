@@ -77,33 +77,5 @@
 		.swiper-wrapper {
 			margin-bottom: 20px;
 		}
-
-		.swiper-navigation {
-			@extend %flex-align;
-			gap: 12px;
-			justify-content: center;
-		}
-
-		.swiper-button-next,
-		.swiper-button-prev {
-			width: 40px;
-			height: 40px;
-			border-radius: 50%;
-			border: 1px solid var(--secondary);
-			background-color: transparent;
-			background-image: url("@img/icon-slider-arrow.svg");
-			background-repeat: no-repeat;
-			background-size: 24px;
-			background-position: center;
-			transition: opacity var(--main-transition);
-		}
-
-		.swiper-button-prev {
-			transform: rotate(180deg);
-		}
-
-		.swiper-button-disabled {
-			opacity: 0.4;
-		}
 	}
 }
