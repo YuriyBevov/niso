@@ -39,16 +39,31 @@ header.header
         tag: 'button',
         text: 'Записаться на прием'
       })
-      +burger-btn({})
-    .header__section.header__section--bottom.mobile-menu.expande
+      +burger-btn({cls: 'mobile-menu-opener'})
+    .header__section.header__section--bottom.mobile-menu
       .mobile-menu__wrapper
         .mobile-menu__header
           include ../../components/_ui/logos/main-logo/main-logo
-          +burger-btn({cls: 'active'})
+          +burger-btn({cls: 'mobile-menu-closer active'})
 
         +top-menu([
           { title: 'О нас', link: 'about.html'},
-          { title: 'Услуги', link: 'services-main.html'},
+          { title: 'Услуги', 
+            link: 'services-main.html',
+            inner: [
+              { title: 'Протезирование', link: '#'},
+              { title: 'Хирургия', link: '#',
+                inner: [
+                  { title: 'Открытый синус лифтинг', link: '#'},
+                  { title: 'Закрытый синус лифтинг', link: '#'},
+                  { title: 'Имплантация', link: '#'},
+                  { title: 'Удаление зуба + установка одномоментная имплантация', link: '#'},
+                ] 
+              },
+              { title: 'Лечение каналов', link: '#'},
+              { title: 'Отбеливание', link: '#'},
+            ] 
+          },
           { title: 'Примеры работ', link: 'projects.html'},
           { title: 'Врачи', link: 'staff-main.html'},
           { title: 'Акции', link: 'sale-main.html'},

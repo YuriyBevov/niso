@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
     <title>НИСО</title>
     <meta name="description" content="НИСО"/>
-    <script type="module" crossorigin src="./assets/index.pug-Dti7qVlK.js"></script>
+    <script type="module" crossorigin src="./assets/index.pug-D8FF_K9P.js"></script>
     <link rel="stylesheet" crossorigin href="./assets/css/index.css">
   </head>
 </html>
@@ -15,14 +15,14 @@
     <div class="header__section header__section--top"><a class="main-logo" href="/" aria-label="Название сайта для скринридера"><img src="./assets/img/logo.svg" alt="Название сайта" width="180" height="40"></a>
       <div class="info-block info-block--address">
         <svg width="24" height="24" role="img" aria-hidden="true" focusable="false">
-          <use xlink:href="./assets/sprite.svg#sprite-icon-pin"></use>
+          <use xlink:href="./assets/sprite.svg#icon-pin"></use>
         </svg>
         <div class="info-block__content"><address>г. Санкт-Петербург. ул. Профессора Попова д. 27</address><span class="worktime">09:00 - 21:00 ежедневно</span>
         </div>
       </div>
       <div class="info-block info-block--contacts">
         <svg width="24" height="24" role="img" aria-hidden="true" focusable="false">
-          <use xlink:href="./assets/sprite.svg#sprite-icon-info"></use>
+          <use xlink:href="./assets/sprite.svg#icon-info"></use>
         </svg>
         <div class="info-block__content"><a href="mailto:info@niso-dental.ru">info@niso-dental.ru</a><a href="tel:89817685425">8 (981) 768-54-25</a>
         </div>
@@ -31,36 +31,74 @@
       </div>
       <button class="main-btn" type="button"><span>Записаться на прием</span>
       </button>
-      <div class="burger-btn" aria-label="Кнопка открытия меню"><span class="burger-btn-line burger-btn-line--top" aria-hidden="true"></span><span class="burger-btn-line burger-btn-line--middle" aria-hidden="true"></span><span class="burger-btn-line burger-btn-line--bottom" aria-hidden="true"></span></div>
+      <div class="burger-btn mobile-menu-opener" aria-label="Кнопка открытия меню"><span class="burger-btn-line burger-btn-line--top" aria-hidden="true"></span><span class="burger-btn-line burger-btn-line--middle" aria-hidden="true"></span><span class="burger-btn-line burger-btn-line--bottom" aria-hidden="true"></span></div>
     </div>
-    <div class="header__section header__section--bottom mobile-menu expande">
+    <div class="header__section header__section--bottom mobile-menu">
       <div class="mobile-menu__wrapper">
         <div class="mobile-menu__header"><a class="main-logo" href="/" aria-label="Название сайта для скринридера"><img src="./assets/img/logo.svg" alt="Название сайта" width="180" height="40"></a>
-          <div class="burger-btn active" aria-label="Кнопка открытия меню"><span class="burger-btn-line burger-btn-line--top" aria-hidden="true"></span><span class="burger-btn-line burger-btn-line--middle" aria-hidden="true"></span><span class="burger-btn-line burger-btn-line--bottom" aria-hidden="true"></span></div>
+          <div class="burger-btn mobile-menu-closer active" aria-label="Кнопка открытия меню"><span class="burger-btn-line burger-btn-line--top" aria-hidden="true"></span><span class="burger-btn-line burger-btn-line--middle" aria-hidden="true"></span><span class="burger-btn-line burger-btn-line--bottom" aria-hidden="true"></span></div>
         </div>
         <nav class="top-menu">
           <ul>
-            <li><a href="about.html">О нас</a></li>
-            <li><a href="services-main.html">Услуги</a></li>
-            <li><a href="projects.html">Примеры работ</a></li>
-            <li><a href="staff-main.html">Врачи</a></li>
-            <li><a href="sale-main.html">Акции</a></li>
-            <li><a href="info.html">Информация</a></li>
-            <li><a href="articles-main.html">Блог</a></li>
-            <li><a href="contacts.html">Контакты</a></li>
+            <li><a href="about.html">О нас</a>
+            </li>
+            <li class="dropdown-menu"><a href="services-main.html">Услуги
+                <div class="top-menu-inner-opener">
+                  <svg width="12" height="12" role="img" aria-hidden="true" focusable="false">
+                    <use xlink:href="./assets/sprite.svg#icon-menu-arrow"></use>
+                  </svg>
+                </div></a>
+              <div class="top-menu__inner-wrapper">
+                <ul>
+                  <li><a href="#">Протезирование</a>
+                  </li>
+                  <li><a href="#">Хирургия
+                      <div class="top-menu-inner-opener">
+                        <svg width="12" height="12" role="img" aria-hidden="true" focusable="false">
+                          <use xlink:href="./assets/sprite.svg#icon-menu-arrow"></use>
+                        </svg>
+                      </div></a>
+                    <div class="top-menu__inner-wrapper">
+                      <ul>
+                        <li><a href="#">Открытый синус лифтинг</a></li>
+                        <li><a href="#">Закрытый синус лифтинг</a></li>
+                        <li><a href="#">Имплантация</a></li>
+                        <li><a href="#">Удаление зуба + установка одномоментная имплантация</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li><a href="#">Лечение каналов</a>
+                  </li>
+                  <li><a href="#">Отбеливание</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li><a href="projects.html">Примеры работ</a>
+            </li>
+            <li><a href="staff-main.html">Врачи</a>
+            </li>
+            <li><a href="sale-main.html">Акции</a>
+            </li>
+            <li><a href="info.html">Информация</a>
+            </li>
+            <li><a href="articles-main.html">Блог</a>
+            </li>
+            <li><a href="contacts.html">Контакты</a>
+            </li>
           </ul>
         </nav>
         <div class="mobile-menu__footer">
           <div class="info-block info-block--address">
             <svg width="24" height="24" role="img" aria-hidden="true" focusable="false">
-              <use xlink:href="./assets/sprite.svg#sprite-icon-pin"></use>
+              <use xlink:href="./assets/sprite.svg#icon-pin"></use>
             </svg>
             <div class="info-block__content"><address>г. Санкт-Петербург. ул. Профессора Попова д. 27</address><span class="worktime">09:00 - 21:00 ежедневно</span>
             </div>
           </div>
           <div class="info-block info-block--contacts">
             <svg width="24" height="24" role="img" aria-hidden="true" focusable="false">
-              <use xlink:href="./assets/sprite.svg#sprite-icon-info"></use>
+              <use xlink:href="./assets/sprite.svg#icon-info"></use>
             </svg>
             <div class="info-block__content"><a href="mailto:info@niso-dental.ru">info@niso-dental.ru</a><a href="tel:89817685425">8 (981) 768-54-25</a>
             </div>
@@ -1021,14 +1059,14 @@
       <div class="footer__section-field">
         <div class="info-block info-block--address">
           <svg width="24" height="24" role="img" aria-hidden="true" focusable="false">
-            <use xlink:href="./assets/sprite.svg#sprite-icon-pin"></use>
+            <use xlink:href="./assets/sprite.svg#icon-pin"></use>
           </svg>
           <div class="info-block__content"><address>г. Санкт-Петербург. ул. Профессора Попова д. 27</address><span class="worktime">09:00 - 21:00 ежедневно</span>
           </div>
         </div>
         <div class="info-block info-block--contacts">
           <svg width="24" height="24" role="img" aria-hidden="true" focusable="false">
-            <use xlink:href="./assets/sprite.svg#sprite-icon-info"></use>
+            <use xlink:href="./assets/sprite.svg#icon-info"></use>
           </svg>
           <div class="info-block__content"><a href="mailto:info@niso-dental.ru">info@niso-dental.ru</a><a href="tel:89817685425">8 (981) 768-54-25</a>
           </div>

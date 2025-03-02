@@ -109,10 +109,6 @@
 		background-color: rgba(0, 0, 0, 0.6);
 		backdrop-filter: blur(3px);
 
-		&.expanded {
-			display: block;
-		}
-
 		&__wrapper {
 			@extend %flex-column;
 			gap: 40px;
@@ -124,6 +120,7 @@
 			background-color: var(--lighter);
 			overflow: hidden;
 			overflow-y: auto;
+			scrollbar-gutter: stable;
 		}
 
 		&__header {
@@ -143,12 +140,22 @@
 			gap: 20px;
 			margin-top: auto;
 			padding-bottom: 30px;
+
+			@include container-down("header", $mobile-width) {
+				.main-btn {
+					width: 100%;
+				}
+			}
 		}
 	}
 
 	@include container-up("header", $tablet-lg-width) {
+		display: block !important;
+		opacity: 1 !important;
 		&__wrapper {
 			width: 100%;
+			opacity: 1 !important;
+			transform: none !important;
 		}
 		&__header {
 			display: none;
