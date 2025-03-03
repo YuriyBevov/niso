@@ -25,6 +25,10 @@
 			}
 
 			@include container-down("footer", 440px) {
+				.main-btn {
+					width: 100%;
+					max-width: 100%;
+				}
 				.bottom-menu ul {
 					display: block;
 					width: 100%;
