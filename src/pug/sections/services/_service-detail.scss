@@ -1,0 +1,45 @@
+@forward "@styles/_extends/flexbox.scss";
+@forward "@styles/_extends/effects.scss";
+@forward "@styles/_extends/resets.scss";
+@use "@styles/_mixins/media-queries" as *;
+@use "@styles/_mixins/container-queries" as *;
+@use "@styles/_vars/scoped" as *;
+
+// @use "@pug/components/blocks/sidemenu/sidemenu";
+
+.service-detail {
+	container: service-detail / inline-size;
+
+	&__grid {
+		&:has(.service-detail__grid-item--sidebar) {
+			display: grid;
+			grid-template-columns: 1fr;
+			gap: 30px clamp(40px, 4vw, 60px);
+
+			@include container-up("service-detail", $tablet-lg-width) {
+				grid-template-columns: 320px auto;
+			}
+		}
+
+		&:not(:has(.service-detail__grid-item--sidebar)) {
+			@extend %flex-column;
+		}
+
+		&-item {
+			&--content {
+				.base-title {
+					margin-bottom: clamp(20px, 3.6vw, 40px);
+				}
+			}
+
+			&--sidebar {
+				@extend %flex-column;
+				gap: 30px;
+				display: none;
+				@include container-up("service-detail", $tablet-lg-width) {
+					display: flex;
+				}
+			}
+		}
+	}
+}

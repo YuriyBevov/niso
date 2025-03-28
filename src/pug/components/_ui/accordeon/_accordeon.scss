@@ -26,6 +26,7 @@ $inner-padding: clamp(16px, 2.4vw, 30px);
 			.accordeon-body {
 				grid-template-rows: 1fr;
 				opacity: 1;
+				margin-bottom: 20px;
 			}
 
 			.accordeon-opener {
@@ -76,6 +77,10 @@ $inner-padding: clamp(16px, 2.4vw, 30px);
 
 			& > * {
 				margin-top: 0;
+
+				&:last-child {
+					margin-bottom: 20px;
+				}
 			}
 		}
 	}

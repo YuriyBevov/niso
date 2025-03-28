@@ -10,7 +10,6 @@
 	background: linear-gradient(270deg, #44c6e9 -54.9%, #336cbc 100%);
 	border-radius: var(--border-radius-lg);
 	padding-bottom: 60px;
-	// container: top-banner-slider / inline-size;
 
 	@include container-up("main", 480px) {
 		padding-bottom: 0;
@@ -67,6 +66,12 @@
 	}
 
 	& * {
+		margin: 0;
+	}
+
+	& &__title,
+	& &__text,
+	& &__headline {
 		margin: 0;
 		color: var(--white);
 	}

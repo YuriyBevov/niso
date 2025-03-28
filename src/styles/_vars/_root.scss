@@ -20,6 +20,7 @@
 	--lighter: #ecf4fb;
 	--info: #666666;
 	--muted: #d9d9d9;
+	--mint: #f2f5f7;
 }
 
 // containers
@@ -54,6 +55,7 @@
 :root {
 	--scrollbar-color: var(--light);
 	--scrollbar-width: 8px;
+	--scrollbar-height: 6px;
 	--scrollbar-border-radius: 8px;
 	--scrollbar-thumb-color: var(--secondary);
 	--scrollbar-thumb-border-radius: 8px;

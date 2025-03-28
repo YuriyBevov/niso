@@ -1,0 +1,9 @@
+.swiper.base-cards-slider.top-side-slider{
+  width:100% !important;
+  height:100%;
+  padding:0;
+  margin:0;
+}
+.swiper.base-cards-slider.top-side-slider .swiper-slide{
+  width:100% !important;
+}

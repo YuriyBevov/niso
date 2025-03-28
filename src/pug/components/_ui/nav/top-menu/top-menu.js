@@ -6,7 +6,7 @@ if (items.length) {
 	items.forEach((item) => {
 		item.addEventListener("click", (evt) => {
 			evt.preventDefault();
-			evt.currentTarget.parentNode.parentNode.classList.toggle("expanded");
+			evt.currentTarget.closest("li").classList.toggle("expanded");
 		});
 	});
 }

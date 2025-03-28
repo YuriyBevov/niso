@@ -4,12 +4,13 @@
 
 .staff-preview-card {
 	@extend %flex-column;
-	gap: 5px;
+	gap: 10px;
 	height: inherit;
 	padding: clamp(12px, 2.2vw, 20px);
 	border-radius: var(--border-radius-sm);
 	transition: box-shadow var(--main-transition);
 	box-shadow: var(--base-box-shadow);
+	min-height: 400px;
 
 	&-wrapper {
 		height: 100%;
@@ -19,7 +20,7 @@
 	@include container-up("staff-preview-card", 738px) {
 		display: grid;
 		grid-template-columns: 300px 1fr;
-		gap: 20px 30px;
+		gap: 5px 30px;
 
 		.staff-preview-card__content {
 			grid-column: 2/3;
@@ -57,9 +58,10 @@
 	&__content {
 		@extend %flex-column;
 		gap: 5px;
+		padding-right: 20px;
 
 		@include container-up("staff-preview-card", 738px) {
-			gap: 20px;
+			gap: 14px;
 		}
 
 		&-section {
@@ -70,6 +72,7 @@
 				gap: 20px;
 				strong {
 					display: none;
+					color: var(--secondary);
 				}
 				&:not(:first-of-type) {
 					display: none;

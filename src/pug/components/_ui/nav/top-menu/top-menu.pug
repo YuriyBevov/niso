@@ -13,11 +13,10 @@ mixin top-menu(data)
               ul
                 each inner in item.inner
                   li
-                    a(href= inner.link)!= inner.title
+                    span.top-menu-inner-opener!= inner.title
                       if inner.inner
-                        .top-menu-inner-opener
-                          svg(width='12' height='12' role='img' aria-hidden='true' focusable='false')
-                            use(xlink:href='./assets/sprite.svg#icon-menu-arrow')
+                        svg(width='12' height='12' role='img' aria-hidden='true' focusable='false')
+                          use(xlink:href='./assets/sprite.svg#icon-menu-arrow')
                     if inner.inner
                       .top-menu__inner-wrapper
                         ul

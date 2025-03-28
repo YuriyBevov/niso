@@ -23,7 +23,6 @@
 				url("@img/services-preview/services-preview-bg@1x.png") 1x
 			);
 
-			// background-image: url(@img/services-preview/services-preview-bg.png);
 			background-size: 60vw;
 			background-repeat: no-repeat;
 			background-position: right bottom;
@@ -31,6 +30,10 @@
 
 		@include container-up("services-preview", $mobile-width) {
 			grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+
+			&.grid-2cols {
+				grid-template-columns: repeat(2, 1fr);
+			}
 		}
 	}
 }

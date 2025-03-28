@@ -1,0 +1,63 @@
+@forward "@styles/_extends/flexbox.scss";
+@use "@styles/_mixins/container-queries" as *;
+@use "@styles/_mixins/media-queries" as *;
+@use "@styles/_vars/scoped" as *;
+
+.staff-detail {
+	padding: 40px 0;
+
+	&__grid {
+		@extend %flex-column;
+		flex-direction: column-reverse;
+		gap: 40px;
+
+		@include media-up($tablet-lg-width) {
+			display: grid;
+			grid-template-columns: 2fr 1fr;
+		}
+
+		&-item {
+			@extend %flex-column;
+			gap: 10px;
+			height: fit-content;
+
+			&--side {
+				@extend %flex-center;
+				background-image: url("@img/background.png");
+				background-size: cover;
+				padding: 20px;
+				padding-bottom: 0;
+				border-radius: var(--base-border-radius);
+				margin-bottom: 60px;
+				position: relative;
+
+				.main-btn {
+					position: absolute;
+					bottom: -60px;
+					left: 0;
+					width: 100%;
+
+					@include media-up($mobile-width) {
+						max-width: 280px;
+					}
+
+					@include media-up($tablet-lg-width) {
+						max-width: 100%;
+					}
+				}
+
+				img {
+					display: flex;
+					width: 100%;
+					max-width: 300px;
+					height: auto;
+					object-position: center;
+				}
+			}
+		}
+	}
+
+	&__section {
+		@extend %flex-column;
+	}
+}

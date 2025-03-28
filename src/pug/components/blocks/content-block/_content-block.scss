@@ -1,11 +1,99 @@
+/* purgecss start ignore */
 .content {
 	font-size: 16px;
+	color: var(--dark);
+
+	& > * {
+		margin: 0;
+	}
+
 	strong {
 		color: var(--secondary);
 	}
 
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		margin: 20px 0;
+	}
+
+	p,
+	span {
+		margin: 15px 0;
+	}
+
 	ul {
-		margin: 0;
+		margin: 15px 0;
 		padding-left: 30px;
 	}
+
+	a {
+		color: var(--warning);
+		text-decoration: underline;
+	}
+
+	.table-wrapper {
+		overflow: hidden;
+		width: 100%;
+		// max-width: calc(100vw - var(--container-offset) * 2);
+		overflow-x: auto;
+		margin: 40px 0;
+	}
+
+	table {
+		width: 100%;
+		border-collapse: collapse;
+		border-radius: 20px 20px 0 0;
+		overflow: hidden;
+		font-size: clamp(16px, 2.4vw, 18px);
+		width: 100%;
+		min-width: 720px;
+
+		td {
+			padding: 20px 40px;
+
+			&:not(:first-child) {
+				text-align: center;
+				white-space: nowrap;
+			}
+		}
+
+		thead {
+			color: var(--accent);
+			background-color: var(--mint);
+
+			td {
+				font-weight: 600;
+			}
+		}
+
+		tbody {
+			tr {
+				&:not(:last-child) {
+					border-bottom: 1px solid var(--lighter);
+				}
+			}
+		}
+	}
+
+	blockquote {
+		position: relative;
+		padding: 5px 24px;
+		margin: 40px 0;
+
+		&::before {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 4px;
+			height: 100%;
+			background-color: var(--secondary);
+			content: "";
+			border-radius: 2px;
+		}
+	}
 }
+/* purgecss end ignore */

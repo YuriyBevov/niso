@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
     <title>НИСО</title>
     <meta name="description" content="НИСО"/>
-    <script type="module" crossorigin src="./assets/index.pug-D8FF_K9P.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/css/index.css">
+    <script type="module" crossorigin src="./assets/main-BFPrCXFm.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/css/main.css">
   </head>
 </html>
 <header class="header">
@@ -50,14 +50,12 @@
                 </div></a>
               <div class="top-menu__inner-wrapper">
                 <ul>
-                  <li><a href="#">Протезирование</a>
+                  <li><span class="top-menu-inner-opener">Протезирование</span>
                   </li>
-                  <li><a href="#">Хирургия
-                      <div class="top-menu-inner-opener">
-                        <svg width="12" height="12" role="img" aria-hidden="true" focusable="false">
-                          <use xlink:href="./assets/sprite.svg#icon-menu-arrow"></use>
-                        </svg>
-                      </div></a>
+                  <li><span class="top-menu-inner-opener">Хирургия
+                      <svg width="12" height="12" role="img" aria-hidden="true" focusable="false">
+                        <use xlink:href="./assets/sprite.svg#icon-menu-arrow"></use>
+                      </svg></span>
                     <div class="top-menu__inner-wrapper">
                       <ul>
                         <li><a href="#">Открытый синус лифтинг</a></li>
@@ -67,9 +65,9 @@
                       </ul>
                     </div>
                   </li>
-                  <li><a href="#">Лечение каналов</a>
+                  <li><span class="top-menu-inner-opener">Лечение каналов</span>
                   </li>
-                  <li><a href="#">Отбеливание</a>
+                  <li><span class="top-menu-inner-opener">Отбеливание</span>
                   </li>
                 </ul>
               </div>
@@ -155,15 +153,31 @@
           </div>
         </div>
         <div class="hero__grid-item hero__grid-item--side">
-            <div class="base-card-wrapper">
-              <div class="base-card">
-                <div class="base-card__content"><small class="base-card__headline">Действует до 31 января 2025г.</small><span class="base-subtitle">Имплантация “Все-на-4” по лучшей цене в Москве</span><span class="base-text">В стоимость включено: диагностика, 4 имплантата + операция, хирургический набор, анестезия, временный адаптационный протез. В стоимость включено: диагностика, 4 имплантата + операция, хирургический набор, анестезия, временный адаптационный протез.</span>
-                  <div class="price-badge"><span>от 199 000 руб.</span></div>
-                            <a class="main-btn main-btn--outlined" href="sales.html"><span>Подробнее</span>
-                            </a>
-                </div>
+          <div class="swiper top-side-slider base-cards-slider">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                          <div class="base-card-wrapper">
+                            <div class="base-card">
+                              <div class="base-card__content"><small class="base-card__headline">Действует до 31 января 2025г.</small><span class="base-subtitle">Имплантация “Все-на-4” по лучшей цене в Москве</span>
+                                <div class="price-badge"><span>от 199 000 руб.</span></div><span class="base-text">В стоимость включено: диагностика, 4 имплантата + операция, хирургический набор, анестезия, временный адаптационный протез. В стоимость включено: диагностика, 4 имплантата + операция, хирургический набор, анестезия, временный адаптационный протез.</span>
+                                          <a class="main-btn main-btn--outlined" href="sales.html"><span>Подробнее</span>
+                                          </a>
+                              </div>
+                            </div>
+                          </div>
+              </div>
+              <div class="swiper-slide">
+                          <div class="base-card-wrapper">
+                            <div class="base-card">
+                              <div class="base-card__content"><small class="base-card__headline">Действует до 31 января 2025г.</small><span class="base-subtitle">Имплантация “Все-на-4” по лучшей цене в Москве</span><span class="base-text">В стоимость включено: диагностика, 4 имплантата + операция, хирургический набор, анестезия, временный адаптационный протез. В стоимость включено: диагностика, 4 имплантата + операция, хирургический набор, анестезия, временный адаптационный протез.</span>
+                                          <a class="main-btn main-btn--outlined" href="sales.html"><span>Подробнее</span>
+                                          </a>
+                              </div>
+                            </div>
+                          </div>
               </div>
             </div>
+          </div>
         </div>
         <div class="hero__grid-item hero__grid-item--tizzers">
             <div class="tizzers-wrapper">
@@ -216,7 +230,7 @@
       <div class="base-section__header"><span class="base-text base-section__headline">Как мы можем помочь</span>
         <h2 class="base-title">Популярные услуги</h2>
       </div>
-      <div class="services-preview__grid">
+      <div class="services-preview__grid grid-2cols">
         <div class="services-preview__grid-item"> 
                 <div class="service-preview-card-wrapper">
                   <div class="service-preview-card">
@@ -938,7 +952,7 @@
                   </div>
           </div>
           <div class="reviews-preview__button-row">
-                  <a class="main-btn main-btn--outlined" href="#"><span>Смотреть все отзывы</span>
+                  <a class="main-btn main-btn--outlined" href="#"><span>Показать</span>
                   </a>
                   <button class="main-btn" type="button"><span>Оставить отзыв</span>
                   </button>

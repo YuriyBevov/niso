@@ -1,4 +1,4 @@
-include ../../components/_ui/cards/base-card/base-card
+
 include ../../components/blocks/tizzers-block/tizzers-block
 section.hero
   .container
@@ -6,18 +6,8 @@ section.hero
       .hero__grid-item.hero__grid-item--top-banner
         include ../../components/_ui/sliders/top-banner/top-banner
       .hero__grid-item.hero__grid-item--side
-        +base-card({
-          headline: 'Действует до 31 января 2025г.',
-          title: 'Имплантация “Все-на-4” по лучшей цене в Москве',
-          text: 'В стоимость включено: диагностика, 4 имплантата + операция, хирургический набор, анестезия, временный адаптационный протез. В стоимость включено: диагностика, 4 имплантата + операция, хирургический набор, анестезия, временный адаптационный протез.',
-          link: {
-            tag: 'a',
-            href: 'sales.html',
-            text: 'Подробнее',
-            cls: 'main-btn--outlined'
-          },
-          price: 'от 199 000 руб.'
-        })
+        include ../../components/_ui/sliders/top-side-slider/top-side-slider
+
       .hero__grid-item.hero__grid-item--tizzers
         +tizzers-block({
           items: [

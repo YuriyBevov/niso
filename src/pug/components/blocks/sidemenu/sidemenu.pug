@@ -1,0 +1,13 @@
+mixin sidemenu(data)
+  .sidemenu
+    ul
+      each item in data
+        li
+          span!= item.title
+          svg(width='24' height='24' role='img' aria-hidden='true' focusable='false')
+            use(xlink:href='./assets/sprite.svg#icon-menu-arrow')
+          if item.inner
+            ul
+              each inner in item.inner
+                li
+                  a(href="#")!= inner.title

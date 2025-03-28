@@ -96,6 +96,9 @@
   .services-preview__grid{
     grid-template-columns:repeat(auto-fill, minmax(350px, 1fr));
   }
+  .services-preview__grid.grid-2cols{
+    grid-template-columns:repeat(2, 1fr);
+  }
 }
 @media (hover: hover){
   .service-preview-card:has(ul) ul li:hover::marker,

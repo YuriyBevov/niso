@@ -5,8 +5,8 @@
 
 .hero {
 	container: hero / inline-size;
-
 	padding: clamp(20px, 5vw, 80px) 0;
+
 	&__grid {
 		display: grid;
 		grid-template-columns: 1fr;
@@ -31,7 +31,6 @@
 
 			&--side {
 				order: 2;
-
 				.base-card {
 					padding: 40px clamp(10px, 3vw, 40px);
 					background-image: url("@img/hero-side-banner-bg.svg");

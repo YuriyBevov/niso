@@ -41,6 +41,7 @@
 			@include container-up("header", $mobile-width) {
 				.main-btn {
 					display: flex;
+					white-space: nowrap;
 				}
 			}
 

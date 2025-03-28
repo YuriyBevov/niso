@@ -1,8 +1,8 @@
+/* purgecss start ignore */
 *,
 *::before,
 *::after {
 	box-sizing: border-box;
-	overscroll-behavior: contain;
 }
 
 html,
@@ -24,6 +24,7 @@ body {
 		background-color: var(--scrollbar-color);
 		width: var(--scrollbar-width);
 		border-radius: var(--scrollbar-border-radius);
+		height: var(--scrollbar-height);
 	}
 
 	&::-webkit-scrollbar-thumb {
@@ -89,3 +90,4 @@ picture,
 img {
 	display: flex;
 }
+/* purgecss end ignore */

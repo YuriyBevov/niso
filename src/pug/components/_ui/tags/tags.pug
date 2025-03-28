@@ -1,0 +1,11 @@
+mixin tags(data)
+  .swiper.tags
+    .swiper-wrapper
+      each tag in data
+        .swiper-slide
+          +main-btn({
+            tag: 'a',
+            href: '#',
+            text: tag.title,
+            cls: tag.cls
+          })

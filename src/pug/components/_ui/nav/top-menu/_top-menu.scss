@@ -17,7 +17,8 @@
 			justify-content: space-around;
 		}
 
-		a {
+		a,
+		span {
 			@extend %flex-align;
 			flex-grow: 1;
 			padding: 6px 12px;
@@ -30,7 +31,8 @@
 		}
 
 		@include container-down("header", $tablet-lg-width) {
-			a {
+			a,
+			span {
 				min-height: 44px;
 				justify-content: space-between;
 				gap: 8px;
@@ -43,6 +45,7 @@
 					@extend %flex-center;
 					width: 40px;
 					height: 40px;
+					cursor: pointer;
 				}
 			}
 
@@ -50,17 +53,21 @@
 				display: none;
 				padding-left: 20px;
 
-				a {
+				a,
+				span {
 					color: var(--primary);
 				}
-
+				span {
+					cursor: pointer;
+				}
 				.top-menu__inner-wrapper a {
 					color: var(--secondary);
 				}
 			}
 
 			li.expanded {
-				& > a > .top-menu-inner-opener svg {
+				& > a > .top-menu-inner-opener svg,
+				& > span > svg {
 					transform: rotate(90deg);
 				}
 				& > .top-menu__inner-wrapper {
@@ -121,7 +128,8 @@
 						display: flex;
 					}
 
-					a {
+					a,
+					span {
 						@extend %flex-align;
 						flex-grow: 1;
 						justify-content: space-between;
@@ -135,6 +143,10 @@
 							background-color var(--main-transition);
 					}
 
+					span {
+						cursor: default;
+					}
+
 					& > ul > li:focus,
 					& > ul > li:hover {
 						& > .top-menu__inner-wrapper {
@@ -142,7 +154,8 @@
 							opacity: 1;
 							z-index: 1;
 						}
-						& > a {
+						& > a,
+						& > span {
 							background-color: var(--primary);
 							color: var(--white);
 
